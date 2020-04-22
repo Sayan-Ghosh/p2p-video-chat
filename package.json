@@ -1,0 +1,18 @@
+{
+  "name": "chat",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Sayan",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "peer": "^0.5.2",
+    "peerjs": "^1.2.0",
+    "socket.io": "^2.3.0"
+  }
+}

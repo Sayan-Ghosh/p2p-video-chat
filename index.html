@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>CHAT</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <meta name="description" content="" />
+    <meta name="viewport" content="width-device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <h1>P2P Video Chat Application</h1>
+    <div id="chat-window">
+      <div id="output"></div>
+      <div id="typing"></div>
+    </div>
+
+    <div class="container">
+      <input
+        type="text"
+        id="handle"
+        class="form-control"
+        placeholder="Name"
+        required
+        autofocus
+      />
+      <input
+        type="text"
+        id="message"
+        class="form-control"
+        placeholder="Enter a message"
+        required
+      />
+      <button
+        id="button"
+        class="btn btn-lg btn-primary btn-block"
+        type="submit"
+      >
+        Send
+      </button>
+    </div>
+
+    <hr>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6 col-md-6 col-lg-6">
+          remote
+          <video id="rVideo" autoplay="autplay">
+        </div>
+        <div class="col-sm-6 col-md-6 col-lg-6">
+          local
+          <video id="lVideo" autoplay="autplay" muted>
+        </div>
+      </div>
+      <span id="displayId"></span>
+      <input
+        type="text"
+        id="connId"
+        class="form-control"
+        placeholder="Enter a connection Id"
+        required
+      />
+      <button
+        id="conn_button"
+        class="btn btn-lg btn-success btn-block"
+        type="submit"
+      >
+        Connect
+      </button>
+      <button
+        id="call_button"
+        class="btn btn-lg btn-danger btn-block"
+        type="submit"
+      >
+        Call
+      </button>
+
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/peerjs@0.3.20/dist/peer.min.js"></script>
+    <script src="/client.js" async defer></script>
+  </body>
+</html>
